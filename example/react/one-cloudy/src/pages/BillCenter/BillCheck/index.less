@@ -1,0 +1,173 @@
+@import '../../../global.less';
+
+.billcheck_rightBtnArea{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: right;
+  .billcheck_rightBtn{
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .billcheck_rightBtn:first-of-type{
+      margin-right: 10px;
+  }
+  .billcheck_rightBtn:last-of-type:hover{
+      color: rgb(24, 144, 255);
+      border-color: rgb(24, 144, 255);
+  }
+  
+  .unChecked{
+      color: #E7E7E7;
+      color: #E7E7E7;
+  }
+
+  .isChecked{
+      color: #00CD38;
+      background: #E4FFEB;
+      border-color: #00CD38;
+  }
+  .selectModal{
+      position: absolute;
+      top:35px;
+      right: 1px;
+      z-index: 1000;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid rgb(217, 217, 217);
+      border-radius: 5px;
+      .selectLists{
+          .selectListsRow{
+              display: flex;
+              justify-content: space-between;
+              width: 150px;
+          }
+      }
+      .selectBtn{
+          span{
+              margin-left: 10px;
+              color: rgb(24, 144, 255);
+              cursor: pointer;
+          }
+      }
+  }
+}
+:global{
+  .ant-table-thead > tr > th .anticon-filter, .ant-table-thead > tr > th .ant-table-filter-icon{
+      right: auto;
+  }
+}
+
+.text{
+  white-space: normal;
+  text-overflow: inherit;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-right: 1px solid #e8e8e8;
+}
+
+.textNoBorder{
+  white-space: normal;
+  text-overflow: inherit;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.haveSearchContent{
+  span{
+      div{
+          color: #1890ff !important;
+      }
+  }
+  :global{
+      .ant-table-column-title{
+          display: inline-block;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+  }
+}
+
+.borderRigh{
+  border-right: 1px solid #e8e8e8;
+}
+.overviewtable{
+  :global{
+      .ant-table-column-has-filters{
+          .ant-table-header-column{
+              div{
+                  overflow: hidden;
+                  white-space: pre-wrap;
+              }
+          }
+      }
+  }
+}
+
+
+.tabPage1 {
+  min-height: @bill-tab-min-height;
+  background: #fff;
+  :global {
+    .ant-tabs-bar {
+      margin-bottom: 4px;
+    }
+    .ant-tabs-nav-container {
+      padding: 0 30px;
+    }
+    .ant-tabs-tabpane {
+      padding: 0 ;
+    }
+  }
+}
+
+
+
+.ellspan{
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  overflow: hidden;  /** 隐藏超出的内容 **/
+  text-overflow: ellipsis; /** 多行 **/
+  word-break: break-all;
+
+  /*! autoprefixer: off */
+
+  -webkit-box-orient:vertical;
+
+  /*! autoprefixer: on */
+  
+  -webkit-line-clamp: 2; /** 显示的行数 **/
+}
+
+/* eslint-enable */
+
+.tabPage3{
+  .tdwrap{
+      white-space: normal !important;
+  }
+}
+
+.billCheck{
+  :global{
+    .antd-pro-components-common-tabs-index-index-tabPage .ant-tabs-tabpane{
+      padding: 0 30px 20px;
+    }
+  }
+}
+
+.overview{
+  :global{
+    .ant-table-thead > tr > th:first-child, .ant-table-tbody > tr > td:first-child{
+      padding-left: 12px !important;
+    }
+    .ant-table-thead > tr > th:last-child, .ant-table-tbody > tr > td:last-child{
+      padding-left: 30px !important;
+
+    }
+  }
+}
+

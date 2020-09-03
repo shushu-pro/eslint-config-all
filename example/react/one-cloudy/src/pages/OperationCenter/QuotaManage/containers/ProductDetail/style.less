@@ -1,0 +1,44 @@
+:global {
+  .quota-product-detail {
+    max-height: 280px;
+    overflow-y: auto;
+
+    .detail-item {
+      margin-top: 14px;
+
+      .detail-item-content {
+        width: 240px;
+
+        h4 {
+          margin-bottom: 4px;
+          color: #333;
+          font-size: 14px;
+        }
+
+        p {
+          color: #999;
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        .left {
+          float: left;
+        }
+
+        .right {
+          float: right;
+        }
+      }
+    }
+
+    &.horizontal {
+      margin-bottom: 20px;
+
+      .detail-item {
+        float: left;
+        width: 33.3%;
+      }
+    }
+  }
+
+}

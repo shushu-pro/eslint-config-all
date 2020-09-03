@@ -1,0 +1,31 @@
+{
+  "name": "@shushu.pro/eslint-config-all",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/shushu-pro/eslint-config-all",
+  "repository": "https://github.com/shushu-pro/eslint-config-all.git",
+  "author": "sschen86 <sschen86@163.com>",
+  "keywords": [
+    "eslint-config"
+  ],
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1"
+  },
+  "files": [
+    "rules/",
+    "javascript.js",
+    "react.js",
+    "vue.js"
+  ]
+}

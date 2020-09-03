@@ -1,0 +1,26 @@
+
+// 用户须知弹框
+.readDoc {
+  display: flex;
+  align-items: center;
+  .readTitle {
+    padding: 0 5px;
+  }
+  .textInfo{
+    padding-right: 30px;
+  }
+}
+.modal {
+  :global {
+    .ant-modal-title{
+      text-align: center;
+    }
+    .ant-modal-body {
+      height: 645px;
+      overflow-y: auto;
+    }
+    .ant-modal-footer {
+      text-align: center;
+    }
+  }
+}

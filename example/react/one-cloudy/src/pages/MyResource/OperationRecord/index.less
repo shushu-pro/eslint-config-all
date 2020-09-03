@@ -1,0 +1,204 @@
+.pageIndex {
+    min-height: 751px;
+    background: #FFF;
+
+    :global {
+        .ant-tabs-nav-container {
+            padding: 0 30px;
+        }
+    }
+}
+
+.recorddetail {
+    padding: 0 30px;
+
+    :global {
+        .ant-table-tbody>tr:nth-child(2n-1)>td {
+            border-bottom: 1px solid #fff;
+        }
+
+        .dark-row {
+            background: #000;
+        }
+    }
+
+    .row {
+        display: flex;
+        margin: 16px 0;
+        font-size: 16px;
+
+        .title {
+            width: 15%;
+            margin-left: 1%;
+            color: #999;
+        }
+
+        .content {
+            width: 100%;
+
+            :global {
+                .ant-form-item-control {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.recordinfo {
+    padding: 10px 30px 0;
+
+    :global {
+
+        .ant-steps-dot .ant-steps-item-content,
+        .ant-steps-dot.ant-steps-small .ant-steps-item-content {
+            width: auto;
+        }
+    }
+}
+
+.operationRecord {
+    .operationItem {
+        color: #1890ff;
+        cursor: pointer;
+    }
+}
+
+
+.refuseColor {
+    :global {
+        .ant-steps-item-title {
+            color: #f50 !important;
+            font-size: 18px;
+        }
+
+        .ant-steps-icon-dot {
+            background: #f50 !important;
+        }
+    }
+}
+
+.passColor {
+    :global {
+        .ant-steps-item-title {
+            color: #1890FF !important;
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+.ellspan {
+    display: -webkit-box;
+    /** 对象作为伸缩盒子模型显示 **/
+    overflow: hidden;
+    /** 隐藏超出的内容 **/
+    text-overflow: ellipsis;
+    /** 多行 **/
+    word-break: break-all;
+
+    /*! autoprefixer: off */
+
+    -webkit-box-orient: vertical;
+
+    /*! autoprefixer: on */
+
+    -webkit-line-clamp: 2;
+    /** 显示的行数 **/
+}
+
+/* eslint-enable */
+
+.tdwrap {
+    white-space: normal !important;
+}
+
+.flowList {
+    padding: 20px 70px 0;
+
+    .refuseColor {
+        :global {
+            .ant-steps-item-title {
+                color: #f50 !important;
+                font-size: 18px;
+            }
+
+            .ant-steps-icon-dot {
+                background: #f50 !important;
+            }
+        }
+    }
+
+    .passColor {
+        :global {
+            .ant-steps-item-title {
+                color: #1890FF !important;
+                font-size: 18px;
+            }
+        }
+    }
+
+    :global {
+        .ant-steps-dot .ant-steps-item-content {
+            min-width: 600px;
+        }
+
+        .ant-steps-item-active .ant-steps-item-tail::after {
+            background-color: #1890FF;
+        }
+
+        .ant-steps-item-finish>.ant-steps-item-content>.ant-steps-item-description {
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 12px;
+        }
+
+        .antd-pro-components-common-stack-panel-index-stackPanel {
+            margin-bottom: 5px;
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 12px;
+        }
+
+        .ant-steps-item-wait .ant-steps-icon-dot {
+            background: rgba(233, 233, 233, 1) !important;
+        }
+
+        .ant-steps-item-wait .ant-steps-item-title {
+            color: #E9E9E9 !important;
+            font-size: 14px;
+        }
+    }
+
+    .remark {
+        color: #5D5D5D;
+        font-size: 12px;
+    }
+
+    .status {
+        color: #1890ff;
+    }
+
+    .lead3_approve_refuse,
+    .lead2_approve_refuse,
+    .lead1_approve_refuse,
+    .bigdata_approve_refuse,
+    .bigdata1_approve_refuse,
+    .safety_approve_refuse,
+    .tl_review_refuse,
+    .review_refuse,
+    .approve_refuse,
+    .cancel_refuse {
+        color: #f50;
+    }
+
+    .finished,
+    .in_product {
+        color: #52c41a;
+    }
+
+}
+
+.footerToolbar {
+    display: flex;
+    align-items: center;
+}

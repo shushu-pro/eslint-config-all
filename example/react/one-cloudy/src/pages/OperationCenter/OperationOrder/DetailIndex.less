@@ -1,0 +1,141 @@
+.tabPage {
+  background: #fff;
+  :global {
+    .ant-tabs-bar {
+      margin-bottom: 4px;
+    }
+    .ant-tabs-nav-container {
+      padding: 0 30px;
+    }
+    .ant-tabs-tabpane {
+      padding: 30px 30px 40px;
+    }
+  }
+}
+
+.resWarp {
+  margin: 0 70px;
+}
+.resCard {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.flowList {
+  padding: 0 50px;
+  .refuseColor {
+    :global {
+      .ant-steps-item-title {
+        color: #f50 !important;
+        font-size: 18px;
+      }
+      .ant-steps-icon-dot {
+        background: #f50 !important;
+      }
+    }
+  }
+  .passColor {
+    :global {
+      .ant-steps-item-title {
+        color: #1890FF !important;
+        font-size: 18px;
+      }
+    }
+  }
+  :global {
+    .ant-steps-dot .ant-steps-item-content {
+      min-width: 600px;
+    }
+    .ant-steps-item-active .ant-steps-item-tail::after {
+      background-color: #1890FF;
+    }
+    .ant-steps-item-finish > .ant-steps-item-content > .ant-steps-item-description {
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 12px;
+    }
+    .antd-pro-components-common-stack-panel-index-stackPanel {
+      margin-bottom: 5px;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 12px;
+    }
+    .ant-steps-item-wait .ant-steps-icon-dot {
+      background: rgba(233, 233, 233, 1) !important;
+    }
+    .ant-steps-item-wait .ant-steps-item-title {
+      color: #E9E9E9 !important;
+      font-size: 14px;
+    }
+  }
+  .remark {
+    color: #5D5D5D;
+    font-size: 12px;
+  }
+
+  .status {
+    color: #1890ff;
+  }
+
+  .lead3_approve_refuse,
+  .lead2_approve_refuse,
+  .lead1_approve_refuse,
+  .bigdata_approve_refuse,
+  .bigdata1_approve_refuse,
+  .safety_approve_refuse,
+  .tl_review_refuse,
+  .review_refuse,
+  .approve_refuse,
+  .cancel_refuse {
+    color: #f50;
+  }
+
+  .finished,
+  .in_product {
+    color: #52c41a;
+  }
+
+}
+.productList{
+  :global {
+    .ant-modal-body {
+      height: 800px;
+      overflow-y: auto;
+    }
+  }
+}
+
+  .alert {
+    position: relative;
+    margin-left: 10px;
+  }
+
+  .allow {
+    position: absolute;
+    top: 11px;
+    left: -11px;
+    z-index: 50;
+    width: 0;
+    height: 0;
+    border-color: transparent #ffa39e transparent transparent;
+    border-style: solid;
+    border-width: 7px 12px 7px 0;
+
+  }
+
+  .allow span {
+    position: absolute;
+    top: -5px;
+    left: 1px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent #fff transparent transparent;
+    border-style: solid;
+    border-width: 5px 10px 5px 0;
+  }
+
+.footerToolbar {
+  display: flex;
+  align-items: center;
+}

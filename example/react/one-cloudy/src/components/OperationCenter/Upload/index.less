@@ -1,0 +1,44 @@
+.fileList {
+  margin-top: 6px;
+  .file {
+    position: relative;
+    display: inline-block;
+    width: 210px;
+    height: 32px;
+    margin-right: 20px;
+    padding: 0 12px;
+    line-height: 32px;
+    background: #f1f1f1;
+    border-radius: 16px;
+  }
+  .name {
+    display: inline-block;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 12px;
+    transform: scale(0.83333333) rotate(0deg);
+    cursor: pointer;
+  }
+  :global {
+    .icon {
+      display: inline-block;
+      font-size: 14px;
+      vertical-align: top;
+    }
+  }
+}
+.downloadButton {
+  display: flex;
+}
+.extra {
+  color: #999;
+  font-size: 12px;
+}

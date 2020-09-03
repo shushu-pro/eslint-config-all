@@ -1,0 +1,73 @@
+.table {
+  margin-top: 50px;
+  :global {
+    tr.ant-table-expanded-row,
+    tr.ant-table-expanded-row:hover {
+      background: #fff;
+    }
+  }
+}
+.resInfo {
+  :global {
+    .antd-pro-components-operation-center-resource-info-index-resCard.antd-pro-components-operation-center-resource-info-index-title {
+      margin-bottom: 0;
+      background: #f9f9f9;
+    }
+    .antd-pro-components-operation-center-resource-info-index-resCard {
+      margin-bottom: 0;
+      border: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0;
+    }
+  }
+}
+
+.divRadius {
+  border: 1px solid #cdc7c7;
+  padding: 1px 1px;
+  background: #dddddd;
+  width: 60px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 25px;
+}
+
+.tableSearchWrap {
+  .tableSearch {
+    height: 32px;
+    width: 120px;
+    animation:spreadSearch 0.3s;
+    -webkit-animation:spreadSearch 0.3s; /* Safari and Chrome */
+    animation-iteration-count:1;
+  }
+  @keyframes spreadSearch
+  {
+    from {
+      height: 0px;
+      width:0px;
+    }
+    to {
+      height: 32px;
+      width:120px;
+    }
+  }
+  @-webkit-keyframes spreadSearch /* Safari and Chrome */
+  {
+    from {
+      height: 0px;
+      width:0px;
+    }
+    to {
+      height: 32px;
+      width:120px;
+    }
+  }
+  :global {
+    .ant-input {
+      width: 120px;
+      height: 32px;
+    }
+  }
+}
+
+

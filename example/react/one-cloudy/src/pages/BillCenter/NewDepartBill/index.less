@@ -1,0 +1,59 @@
+.detailTable{
+    :global{
+        .ant-table-thead > tr > th .anticon-filter, .ant-table-thead > tr > th .ant-table-filter-icon{
+            right: auto;
+        }
+        .ant-table-filter-dropdown{
+            left: 177px;
+        }
+      }
+      .tdwrap{
+        white-space: normal !important;
+    }
+}  
+
+.haveSearchContent{
+    span{
+        div{
+            color: #1890ff !important;
+        }
+    }
+    :global{
+        .ant-table-column-title{
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+  }
+
+.tabStyle{
+    :global{
+        .ant-tabs .ant-tabs-top-content > .ant-tabs-tabpane, .ant-tabs .ant-tabs-bottom-content > .ant-tabs-tabpane {
+            padding: 0 !important;
+        }
+    }
+}
+
+
+
+.ellspan{
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    overflow: hidden;  /** 隐藏超出的内容 **/
+    text-overflow: ellipsis; /** 多行 **/
+    word-break: break-all;
+  
+    /*! autoprefixer: off */
+  
+    -webkit-box-orient:vertical;
+  
+    /*! autoprefixer: on */
+    
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+  }
+  
+  /* eslint-enable */
+  
+  
+

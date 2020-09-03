@@ -1,0 +1,49 @@
+@pad: 16px;
+
+:global {
+  .subordinate-dept {
+    display: flex;
+
+    &>.left {
+      flex: 0 0 250px;
+      width: 250px;
+      border-right: 1px solid #e8e8e8;
+    }
+
+    &>.right {
+      flex: auto;
+      max-height: 1144px;
+      padding-left: 16px;
+      overflow-x:hidden;
+      overflow-y: auto;
+    }
+
+    &.small {
+      border-top: 1px solid #e8e8e8;
+
+      &>.left {
+        flex: 0 0 200px;
+        width: 200px;
+      }
+
+      .dept-tree {
+        max-height: 425px;
+      }
+    }
+
+    .dept-search {
+      width: auto !important;
+      margin: @pad;
+    }
+
+    .dept-tree {
+      max-height: 1080px;
+      padding: 0 @pad @pad @pad;
+    }
+
+    .ant-input {
+      width: 100% !important;
+    }
+  }
+
+}

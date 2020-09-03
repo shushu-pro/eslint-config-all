@@ -1,0 +1,13 @@
+.polTable{
+  padding-top: 20px;
+  :global{
+    .ant-table-thead>tr>th:first-child,
+    .ant-table-tbody>tr>td:first-child{
+      padding-left: 10px;
+    }
+    .ant-table-tbody>tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
+    .ant-table-tbody>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td{
+      background: #fff;
+    }
+  }
+}

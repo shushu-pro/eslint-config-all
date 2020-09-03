@@ -1,0 +1,99 @@
+.haveSearchContent {
+    span {
+        div {
+            color: #1890ff !important;
+        }
+    }
+
+    :global {
+        .ant-table-column-title {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.projectnamelist {
+
+    :global {
+
+        .ant-table-thead>tr:first-child>th:first-child {
+            .ant-checkbox {
+                display: none;
+            }
+        }
+
+        .ant-checkbox-inner {
+            border-radius: 50%;
+        }
+
+        .ant-checkbox-checked:hover {
+            border-radius: 50%;
+        }
+
+        .ant-checkbox-wrapper-checked:hover {
+            border-radius: 50%;
+        }
+
+        .ant-checkbox:hover::after {
+            border-radius: 50%;
+        }
+
+        .ant-tree-checkbox-inner {
+            border-radius: 50%;
+        }
+
+        .ant-tree-checkbox:hover .ant-tree-checkbox-inner {
+            border-color: #1BCD1F;
+            border-radius: 50%;
+        }
+
+        .ant-checkbox:hover::after,
+        .ant-checkbox-wrapper:hover .ant-checkbox::after {
+            border-color: #1BCD1F;
+            border-radius: 50%;
+        }
+
+        .ant-checkbox-wrapper:hover {
+            border-radius: 50%;
+        }
+
+        .ant-checkbox-wrapper:hover .ant-checkbox-inner {
+            border-color: #1BCD1F;
+        }
+
+        .ant-tree-checkbox-checked .ant-tree-checkbox-inner {
+            background-color: #ccc;
+            border-color: #ccc;
+            border-radius: 50%;
+        }
+
+        .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+        .ant-checkbox:hover .ant-checkbox-inner,
+        .ant-checkbox-input:focus+.ant-checkbox-inner {
+            border-color: #ccc;
+        }
+
+        .ant-tree-checkbox-checked::after {
+            border-color: #ccc;
+            border-radius: 50%;
+        }
+
+        .ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner::after {
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+
+        .ant-checkbox,
+        .ant-checkbox-inner {
+            border-radius: 50%;
+        }
+
+        .ant-checkbox-checked .ant-checkbox-inner {
+            background-color: #1BCD1F;
+            border-color: #1BCD1F;
+        }
+    }
+}

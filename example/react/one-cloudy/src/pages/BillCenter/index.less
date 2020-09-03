@@ -1,0 +1,169 @@
+@import '../../global.less';
+
+.confirmed {
+  color: #ff8400;
+}
+.noSent {
+  color: #999;
+}
+.reject {
+  color: #f00;
+}
+.adopt {
+  color: #1890ff;
+}
+.subTitle {
+  margin-right: 8px;
+  color: #999;
+}
+
+.tabPage {
+  min-height:@bill-tab-min-height;
+  background: #fff;
+  :global {
+    .ant-tabs-bar {
+      margin-bottom: 4px;
+    }
+    .ant-tabs-nav-container {
+      padding: 0 30px;
+    }
+    .ant-tabs-tabpane {
+      padding: 0 24px 40px;
+    }
+  }
+}
+
+// 详情页面
+.search {
+  :global {
+    .ant-input {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+    }
+  }
+}
+
+.detailInfo {
+  padding: 0 12px 20px;
+}
+.detailDet {
+  padding: 0 24px;
+}
+.actionBtn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.detail {
+  :global {
+    .ant-form-item-label {
+      line-height: 44px;
+      text-align: left;
+    }
+    .ant-form-item-label > label {
+      color: #999;
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item-control {
+      line-height: 44px;
+    }
+    .ant-table-row-expand-icon {
+      display: none;
+    }
+  }
+}
+
+.projectInfo {
+  margin: 10px 0 40px;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item-label {
+      width: 120px;
+      margin-right: 20px;
+      line-height: 44px;
+      text-align: left;
+    }
+  }
+}
+
+.changeInfo {
+  :global {
+    .antd-pro-components-common-stack-panel-index-stackPanel {
+      align-items: start;
+    }
+  }
+}
+
+
+.statistics {
+  padding: 20px;
+  border-bottom: 1px solid #e8e8e8;
+  :global {
+    .antd-pro-components-common-stack-panel-index-stackPanel{
+      margin-bottom: 0;
+    }
+    .ant-form-item-label {
+      width: 64px;
+      padding-left: 0;
+      line-height: 44px;
+      text-align: left;
+    }
+
+    .ant-form-item-label>label {
+      color: #999;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .ant-form-item-control {
+      line-height: 44px;
+    }
+
+    .ant-table-row-expand-icon {
+      display: none;
+    }
+  }
+}
+
+.sendList{
+  padding: 24px;
+  background: #fff;
+}
+.borderRigh{
+  border-right: 1px solid #e8e8e8;
+}
+.sendTable{
+  width: auto;
+  margin-top: 24px;
+  overflow-x: auto;
+}
+
+.text{
+    white-space: normal;
+    text-overflow: inherit;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-right: 1px solid #e8e8e8;
+}
+
+:global{
+  .ant-popover-inner{
+    min-width: 145px;
+  }
+}
