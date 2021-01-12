@@ -15,7 +15,9 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.2.1",
+    "react": "^17.0.1",
     "typescript": "^4.1.3"
   }
 }
@@ -35,10 +37,12 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'airbnb-base',
+    'plugin:promise/recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  plugins: ['promise', 'prettier'],
+  plugins: ['promise', 'react', 'prettier'],
   env: {
     node: true,
     browser: true,
@@ -127,22 +131,27 @@ module.exports = {
       },
     ],
 
-    'import/default': 2,
+    // 'import/default': 2,
+    'import/prefer-default-export': 0,
 
     '@typescript-eslint/explicit-module-boundary-types': 0,
 
-    'promise/always-return': 'error',
-    'promise/no-return-wrap': 'error',
-    'promise/param-names': 'error',
-    'promise/catch-or-return': 'error',
-    'promise/no-native': 'off',
-    'promise/no-nesting': 'warn',
-    'promise/no-promise-in-callback': 'warn',
-    'promise/no-callback-in-promise': 'warn',
+    'promise/always-return': 0,
+    // 'promise/no-return-wrap': 'error',
+    // 'promise/param-names': 'error',
+    'promise/catch-or-return': 0,
+    // 'promise/no-native': 'off',
+    // 'promise/no-nesting': 'warn',
+    // 'promise/no-promise-in-callback': 'warn',
+    // 'promise/no-callback-in-promise': 'warn',
     'promise/avoid-new': 0,
-    'promise/no-new-statics': 'error',
-    'promise/no-return-in-finally': 'warn',
-    'promise/valid-params': 'warn',
+    // 'promise/no-new-statics': 'error',
+    // 'promise/no-return-in-finally': 'warn',
+    // 'promise/valid-params': 'warn',
+
+    'react/prop-types': 0,
+    'react/display-name': 0,
+    'react/jsx-key': [1, { checkFragmentShorthand: true }],
 
     'prettier/prettier': 'error',
   },
@@ -165,8 +174,19 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
+    react: {
+      version: 'detect',
+    },
 
     // 忽略导入类型错误提示
     'import/ignore': [/\.(scss|less|css)$/],
   },
 };
+
+module.exports = {
+  trailingComma: 'es6',
+  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+  endOfLine: 'auto',
+}
