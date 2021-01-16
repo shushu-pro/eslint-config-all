@@ -1,6 +1,6 @@
 {
   "name": "@shushu.pro/eslint-config-base",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "sschen86 <sschen86@163.com>",
   "homepage": "https://github.com/shushu-pro/eslint-config-all",
   "license": "MIT",
@@ -18,5 +18,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
