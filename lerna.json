@@ -8,6 +8,9 @@
       "npmClientArgs": ["--no-package-lock"]
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "packages": ["packages/eslint-config-*"],
   "version": "0.0.1"
 }
