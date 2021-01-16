@@ -1,42 +1,100 @@
 # @shushu.pro/eslint-config-all
 
-ESLint Config for Javascrip, React and Vue
+## @shushu.pro/eslint-config-base
 
-### 开始使用
+## @shushu.pro/eslint-config-react
+
+## 功能支持
+
+- ✔ eslint
+- ✔ prettier
+- ✔ typescript
+- ✔ react
+
+## 开始使用
+
+### lib eslint 配置项
+
+在开发 基础 js 使用
 
 #### 安装
-`yarn add @shushu.pro/eslint-config-all`
 
-#### 创建配置文件
-```js
-module.exports = {
-  root: true,
-  extends: [
-    '@shushu.pro/eslint-config-all',
-  ],
-  parser: 'eslint-babel',
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  env: {
-    // 你的环境变量（包含多个预定义的全局变量）
-    // browser: true,
-    // node: true,
-  },
-  globals: {
-    // 全局变量校验设置
-    // jQuery: true,
-    // myGlobal: false // 设置为false表示该值不能被重写
-  },
-  rules: {
-    // 自定义规则
-  },
-}
+```bash
+yarn add @shushu.pro/eslint-config-base -D
 ```
 
-[ESLint 官方配置文档](https://cn.eslint.org/docs/user-guide/configuring)
+### react eslint 配置项
 
+在开发 react 应用使用
+
+#### 安装
+
+```bash
+yarn add @shushu.pro/eslint-config-react -D
+```
+
+## ESlint 配置文件
+
+```js
+// .eslintrc.js
+module.exports = {
+  root: true,
+  extends: ["@shushu.pro/base"],
+  // extends: ["@shushu.pro/react"],
+  plugins: [],
+  env: {
+    node: true,
+    browser: true,
+    es6: true,
+  },
+  rules: {
+    // 忽略导入扩展名
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+        css: "ignorePackages",
+      },
+    ],
+  },
+  overrides: [],
+  settings: {
+    "import/resolver": {
+      // alias: {
+      //   map: [['@', './src']],
+      //   extensions: ['.js', '.jsx', '.json '],
+      // },
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+    react: {
+      version: "detect",
+    },
+
+    // 忽略导入类型错误提示
+    "import/ignore": [/\.(scss|less|css)$/],
+  },
+};
+```
+
+## prettier 配置文件
+
+```js
+// .prettierrc.js
+module.exports = {
+  trailingComma: "es6",
+  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+  endOfLine: "auto",
+};
+```
+
+## 附录
+
+- [ESLint 官方配置文档](https://cn.eslint.org/docs/user-guide/configuring)
