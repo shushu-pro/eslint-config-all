@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@shushu.pro/eslint-config-base": "^0.0.2",
+    "@shushu.pro/eslint-config-base": "^0.0.1",
     "@types/react": "^17.0.0",
     "eslint-plugin-react": "^7.22.0"
   },

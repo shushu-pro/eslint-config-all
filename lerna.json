@@ -5,13 +5,9 @@
     },
     "bootstrap": {
       "hoist": true,
-      "npmClientArgs": [
-        "--no-package-lock"
-      ]
+      "npmClientArgs": ["--no-package-lock"]
     }
   },
-  "packages": [
-    "packages/eslint-config-*"
-  ],
-  "version": "0.0.1"
+  "packages": ["packages/eslint-config-*"],
+  "version": "independent"
 }
