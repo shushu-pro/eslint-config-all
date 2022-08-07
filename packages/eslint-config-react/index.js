@@ -1,30 +1,24 @@
 module.exports = {
   root: true,
-  extends: ["plugin:react/recommended", "@shushu.pro/eslint-config-base"],
-  plugins: ["react"],
+  extends: ['plugin:react/recommended', '@shushu.pro/eslint-config-base'],
+  plugins: ['react'],
   rules: {
-    "react/prop-types": 0,
-    "react/display-name": 0,
-    "react/jsx-key": [1, { checkFragmentShorthand: true }],
+    // https://www.npmjs.com/package/eslint-plugin-react
+    // 关闭props类型检测
+    'react/prop-types': 'off',
 
-    "react/no-unescaped-entities": ["error", { forbid: [">", "<"] }],
+    // 允许匿名组件
+    'react/display-name': 'off',
+
+    // 检测缺少key的jsx
+    'react/jsx-key': ['warn', { checkFragmentShorthand: true }],
+
+    // 强制要求转译html特殊字符
+    'react/no-unescaped-entities': ['error', { forbid: ['>', '<'] }],
   },
   settings: {
-    // 'import/extensions': ['.js', '.jsx'],
-    "import/resolver": {
-      // alias: {
-      //   map: [['@', './src']],
-      //   extensions: ['.js', '.jsx', '.json '],
-      // },
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-      },
-    },
     react: {
-      version: "detect",
+      version: 'detect',
     },
-
-    // 忽略导入类型错误提示
-    "import/ignore": [/\.(scss|less|css)$/],
   },
 };

@@ -1,151 +1,195 @@
 module.exports = {
-  root: true,
-  parser: "@typescript-eslint/parser",
+  env: {
+    node: true,
+    browser: true,
+    es2021: true,
+  },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2021,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
       impliedStrict: true,
       jsx: true,
     },
   },
   extends: [
-    "eslint:recommended",
-    "airbnb-base",
-    "plugin:promise/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    // 'plugin:prettier/recommended',
+    'plugin:promise/recommended',
+    'airbnb-base',
+    'prettier',
   ],
-  plugins: ["promise", "prettier"],
-  env: {
-    node: true,
-    browser: true,
-    es6: true,
-  },
+  plugins: ['prettier', '@typescript-eslint', 'promise', 'simple-import-sort'],
   rules: {
-    "no-console": [2, { allow: ["warn", "error"] }],
+    'prettier/prettier': 'error',
+
+    // 数组首尾空格和prettier冲突了
+    // 'array-bracket-spacing': [ 'error', 'always' ],
+
+    // 允许单句箭头函数包含括号
+    'arrow-body-style': 'off',
 
     // 允许累计运算符，++，--
-    "no-plusplus": 0,
+    'no-plusplus': 0,
 
-    // 允许无限循环条件
-    "no-constant-condition": ["error", { checkLoops: false }],
+    // 允许直接使用new而不需要赋值给变量
+    'no-new': 'off',
+
+    // 允许使用console.warn和console.error
+    'no-console': ['error', { allow: ['warn', 'error'] }],
 
     // 允许函数定义在后面
-    "no-use-before-define": 0,
+    'no-use-before-define': 'off',
 
-    // 允许函数返回不一致的值
-    "consistent-return": 0,
-
-    // 允许表达式判断条件
-    "no-cond-assign": [2, "except-parens"],
-
-    // 重名变量使用警告
-    "no-shadow": 1,
-
-    // 允许赋值返回值，在惰性加载重写函数的情况下特别有用
-    "no-return-assign": [2, "except-parens"],
-
-    // 允许for in操作
-    "guard-for-in": 0,
-
-    "no-restricted-syntax": [2, "WithStatement"],
-
-    // 允许文件中有多个类声明
-    "max-classes-per-file": 0,
-
-    // 允许多重赋值
-    "no-multi-assign": 0,
-
-    // 允许下划线
-    "no-underscore-dangle": 0,
+    // 允许使用hasOwnProperty,isPrototypeOf
+    'no-prototype-builtins': 'off',
 
     // 允许修改对象型参数的属性
-    "no-param-reassign": [1, { props: false }],
+    'no-param-reassign': ['warn', { props: false }],
 
-    // 修改循环中的异步调用为警告
-    "no-await-in-loop": 1,
+    // 允许多重赋值
+    'no-multi-assign': 'off',
 
-    // 修改未使用变量为警告
-    "no-unused-vars": [1, { args: "none" }],
+    // 允许赋值返回值，在惰性加载重写函数的情况下特别有用
+    'no-return-assign': ['error', 'except-parens'],
 
-    // 允许没有default
-    "default-case": 0,
+    // 允许使用逗号运算符
+    'no-sequences': 'off',
 
-    // 允许方法中不使用this
-    "class-methods-use-this": 0,
+    // 允许for in操作
+    'guard-for-in': 'off',
+
+    // 不允许使用with语法
+    'no-restricted-syntax': ['error', 'WithStatement'],
 
     // 允许表达式调用
-    "no-unused-expressions": [
-      2,
+    'no-unused-expressions': [
+      'error',
       {
+        // 允许使用逻辑短路运算符
         allowShortCircuit: true,
+
+        // 允许使用三元运算符
         allowTernary: true,
+
+        // 允许使用标记的模板文字
         allowTaggedTemplates: true,
       },
     ],
 
-    // 允许直接使用new
-    "no-new": 0,
+    // 允许switch没有default
+    'default-case': 'off',
 
-    "no-continue": 0,
+    // 允许方法中不使用this
+    'class-methods-use-this': 'off',
 
-    "no-sequences": 1,
+    // 允许函数返回不一致的值
+    'consistent-return': 'off',
 
-    // 忽略导入扩展名
-    "import/extensions": [
-      "error",
-      "never",
+    // 允许文件中有多个类声明
+    'max-classes-per-file': 'off',
+
+    // 允许使用下划线定义变量名称
+    camelcase: 'off',
+
+    // 结构赋值控制
+    'prefer-destructuring': [
+      'error',
       {
-        js: "never",
-        jsx: "never",
-        ts: "never",
-        tsx: "never",
-        css: "ignorePackages",
+        VariableDeclarator: {
+          array: false,
+          object: true,
+        },
+        AssignmentExpression: {
+          array: false,
+          object: false,
+        },
+      },
+      {
+        enforceForRenamedProperties: false,
       },
     ],
 
-    // 'import/default': 2,
-    "import/prefer-default-export": 0,
+    // 解决ts中enum中的错误提示
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'warn',
 
-    "@typescript-eslint/explicit-module-boundary-types": 0,
+    // 关闭已在eslint中定义过的规则
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
-    "promise/always-return": 0,
-    // 'promise/no-return-wrap': 'error',
-    // 'promise/param-names': 'error',
-    "promise/catch-or-return": 0,
-    // 'promise/no-native': 'off',
-    "promise/no-nesting": "off",
-    // 'promise/no-promise-in-callback': 'warn',
-    // 'promise/no-callback-in-promise': 'warn',
-    "promise/avoid-new": 0,
-    // 'promise/no-new-statics': 'error',
-    // 'promise/no-return-in-finally': 'warn',
-    // 'promise/valid-params': 'warn',
+    // 解决ts中enum中的错误提示
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { args: 'none', ignoreRestSiblings: true },
+    ],
 
-    "prettier/prettier": "error",
+    // 允许promise没有返回值
+    'promise/always-return': 'off',
+
+    // 允许错误没有返回值
+    'promise/catch-or-return': 'off',
+
+    // 导入省略扩展名
+    'import/extensions': [
+      'error',
+      {
+        // js: 'never',
+        // jsx: 'never',
+        // ts: 'never',
+        // tsx: 'never',
+        json: 'ignorePackages',
+        // css: 'ignorePackages',
+      },
+    ],
+
+    // 允许模块不导出default
+    'import/prefer-default-export': 'off',
+
+    // 'import/order': [
+    //   'error',
+    //   {
+    //     groups: [
+    //       'builtin',
+    //       'external',
+    //       'internal',
+    //       'parent',
+    //       'sibling',
+    //       'index',
+    //       'object',
+    //       'type',
+    //     ],
+    //     pathGroups: [
+    //       {
+    //         pattern: '@/**',
+    //         group: 'parent',
+    //       },
+    //     ],
+    //   },
+    // ],
+
+    // 导入排序
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts'],
+      },
+    },
   },
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
+      files: ['*.jsx', '*.js'],
       rules: {
-        "@typescript-eslint/explicit-module-boundary-types": 0,
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],
-  settings: {
-    // 'import/extensions': ['.js', '.jsx'],
-    "import/resolver": {
-      // alias: {
-      //   map: [['@', './src']],
-      //   extensions: ['.js', '.jsx', '.json '],
-      // },
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-      },
-    },
-
-    // 忽略导入类型错误提示
-    "import/ignore": [/\.(scss|less|css)$/],
-  },
 };

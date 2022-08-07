@@ -10,9 +10,14 @@
     "eslint-config"
   ],
   "dependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "react": "^18.2.0"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
+    "clear-all": "rimraf node_modules && lerna clean -y",
     "pub": "lerna publish"
   }
 }
